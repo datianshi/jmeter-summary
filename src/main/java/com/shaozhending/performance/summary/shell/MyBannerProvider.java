@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.shell.samples.helloworld.commands;
+package com.shaozhending.performance.summary.shell;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -37,7 +37,7 @@ public class MyBannerProvider extends DefaultBannerProvider
 		StringBuffer buf = new StringBuffer();
 		buf.append("=======================================" + OsUtils.LINE_SEPARATOR);
 		buf.append("*                                     *"+ OsUtils.LINE_SEPARATOR);
-		buf.append("*            HelloWorld               *" +OsUtils.LINE_SEPARATOR);
+		buf.append("*            Jmeter Summary           *" +OsUtils.LINE_SEPARATOR);
 		buf.append("*                                     *"+ OsUtils.LINE_SEPARATOR);
 		buf.append("=======================================" + OsUtils.LINE_SEPARATOR);
 		buf.append("Version:" + this.getVersion());
@@ -50,11 +50,11 @@ public class MyBannerProvider extends DefaultBannerProvider
 	}
 
 	public String getWelcomeMessage() {
-		return "Welcome to HelloWorld CLI";
+		return "Welcome to Jmeter Summary CLI";
 	}
 	
 	@Override
 	public String name() {
-		return "Hello World Banner";
+		return "Jmeter Summary Banner";
 	}
 }

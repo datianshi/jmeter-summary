@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.shell.samples.helloworld.commands;
+package com.shaozhending.performance.summary.shell;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

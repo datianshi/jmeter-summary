@@ -4,7 +4,7 @@
 
 	<groupId>com.shaozhending.performance</groupId>
 	<artifactId>jmeter-summary</artifactId>
-	<version>1.0.1.RELEASE</version>
+	<version>0.0.1.SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>jmeter-summary</name>
@@ -14,6 +14,7 @@
 		<spring.shell.version>1.0.0.RELEASE</spring.shell.version>
 		<jar.mainclass>org.springframework.shell.Bootstrap</jar.mainclass>
 		<log4j.version>1.2.17</log4j.version>
+		<jmeter.version>2.9</jmeter.version>
 	</properties>
 
 	<dependencies>
@@ -33,6 +34,21 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter</artifactId>
+            <version>${jmeter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_core</artifactId>
+            <version>${jmeter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_http</artifactId>
+            <version>${jmeter.version}</version>
+        </dependency>                		
 	</dependencies>
 
 	<build>
@@ -76,12 +92,11 @@
 		</plugins>
 
 	</build>
+	<repositories>
+		<repository>
+			<id>libs-release</id>
+			<url>http://repo.springsource.org/libs-release/</url>
+		</repository>
+	</repositories>
 
-
-	  <repositories>
-	    <repository>
-	      <id>libs-release</id>
-	      <url>http://repo.springsource.org/libs-release/</url>
-	    </repository>
-	  </repositories>
 </project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="304" lt="146" ts="1374702556647" s="true" lb="HTTP Request" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="497">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="146" lt="146" ts="1374702556647" s="true" lb="http://localhost:8080/showcase" rc="302" rm="Found" tn="" dt="" by="162"/>
+  <httpSample t="157" lt="157" ts="1374702556794" s="true" lb="http://localhost:8080/showcase/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="335"/>
+</httpSample>
+<httpSample t="6" lt="3" ts="1374702556964" s="true" lb="HTTP Request 2" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="497">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="3" lt="3" ts="1374702556964" s="true" lb="http://localhost:8080/showcase" rc="302" rm="Found" tn="" dt="" by="162"/>
+  <httpSample t="3" lt="3" ts="1374702556967" s="true" lb="http://localhost:8080/showcase/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="335"/>
+</httpSample>
+
+</testResults>

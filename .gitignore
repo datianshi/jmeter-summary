@@ -1,3 +1,7 @@
 target/
-.classpath/
+.classpath
 .settings
+.project
+bin
+my.log
+

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.shell.samples.helloworld.commands;
+package com.shaozhending.performance.summary.shell;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -30,7 +30,7 @@ public class MyPromptProvider extends DefaultPromptProvider {
 
 	@Override
 	public String getPrompt() {
-		return "hw-shell>";
+		return "jmeter-summary>";
 	}
 
 	
