@@ -34,6 +34,7 @@ public class SummaryConverterTest {
 		
 		assertThat(result.getSampleResults().size(), is(2));
 		assertThat(result.getRow("HTTP Request").getMax(), is(304l));
+		assertThat(result.getRow("Total").getMax(), is(304l));
 		
 	
 	}

@@ -48,7 +48,13 @@
             <groupId>org.apache.jmeter</groupId>
             <artifactId>ApacheJMeter_http</artifactId>
             <version>${jmeter.version}</version>
-        </dependency>                		
+        </dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.4</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

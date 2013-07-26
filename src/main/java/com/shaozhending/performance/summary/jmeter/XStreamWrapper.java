@@ -1,19 +1,23 @@
 package com.shaozhending.performance.summary.jmeter;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.Properties;
 
-import org.apache.jmeter.util.NameUpdater;
-
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
 import com.thoughtworks.xstream.mapper.Mapper;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
+
+/**
+ * XStream register all the necessary converters from mapping.properties
+ * 
+ * @author Shaozhen Ding
+ *
+ */
 
 public final class XStreamWrapper extends XStream {
 	

@@ -13,7 +13,12 @@ import com.thoughtworks.xstream.converters.collections.AbstractCollectionConvert
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.mapper.Mapper;
-
+/**
+ * Xstream converter to scan jtl file and inserting the result files
+ * 
+ * @author Shaozhen Ding
+ *
+ */
 public class SummaryConverter extends AbstractCollectionConverter{
 	
     private static final Properties aliasToClass = new Properties();
@@ -43,6 +48,7 @@ public class SummaryConverter extends AbstractCollectionConverter{
             ver = "1.0";  //$NON-NLS-1$
         }
         results.setVersion(ver);
+        Calculator totalRow = new Calculator("Total");
         while (reader.hasMoreChildren()) {
             reader.moveDown();
             SampleResult sample = (SampleResult) readItem(reader, context, results);
@@ -52,9 +58,11 @@ public class SummaryConverter extends AbstractCollectionConverter{
             	results.putRow(sample.getSampleLabel(), row);
             }
             row.addSample(sample);
+            totalRow.addSample(sample);
             samples.add(sample);
             reader.moveUp();
         }
+        results.putRow("Total", totalRow);
         results.setSampleResults(samples);
         return results;		
 	}

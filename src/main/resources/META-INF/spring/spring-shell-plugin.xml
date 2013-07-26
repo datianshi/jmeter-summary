@@ -12,5 +12,7 @@
 			<bean class="com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider"/>
 		</constructor-arg>
 	</bean>
+	
+	<bean class="com.shaozhending.performance.summary.jmeter.output.OutPutFactory"/>
 
 </beans>
