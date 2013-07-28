@@ -5,4 +5,7 @@ target/
 bin
 my.log
 jmeter.log
+*.iml
+.idea
+
 
